@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Foxhole Facility Architect - V2.5 (Visibilité Déficits)</title>
+    <title>Foxhole Facility Architect - v2.5</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -24,13 +24,7 @@
 <body>
 
 <div id="app">
-    <div v-if="!masterData.length" class="fixed inset-0 z-[200] bg-black/95 flex flex-col items-center justify-center p-10 text-center">
-        <h2 class="text-green-500 text-3xl font-black mb-2 uppercase italic tracking-tighter">Foxhole Architect</h2>
-        <p class="mb-8 text-zinc-600 text-sm">Chargez votre fichier data.json</p>
-        <input type="file" @change="loadDatabase" class="bg-zinc-900 border border-zinc-800 p-6 rounded-lg text-xs cursor-pointer hover:border-green-500 transition shadow-2xl">
-    </div>
-
-    <div v-else class="sidebar shadow-2xl">
+    <div v-if="masterData.length" class="sidebar shadow-2xl">
         <h2 class="text-green-500 font-bold mb-4 uppercase text-[10px] tracking-widest border-b border-green-900 pb-2 text-center text-zinc-500">Structures</h2>
         <div class="space-y-2 mb-6">
             <div v-for="factory in masterData" :key="factory.name" @click="addBuilding(factory)"
@@ -45,11 +39,9 @@
     <div v-if="masterData.length" class="stat-panel shadow-2xl">
         <h2 class="text-green-500 font-bold mb-4 uppercase text-[10px] tracking-widest border-b border-green-900 pb-2 text-center">Réseau & Import</h2>
         
-        <div class="mb-4 p-3 bg-zinc-900 border border-zinc-800 rounded">
-            <div class="flex items-center justify-between">
-                <span class="text-[10px] font-bold uppercase text-zinc-400">Mode Réel</span>
-                <input type="checkbox" v-model="isSimulationActive" class="w-4 h-4 accent-green-500 cursor-pointer">
-            </div>
+        <div class="mb-4 p-3 bg-zinc-900 border border-zinc-800 rounded flex items-center justify-between">
+            <span class="text-[10px] font-bold uppercase text-zinc-400">Mode Réel</span>
+            <input type="checkbox" v-model="isSimulationActive" class="w-4 h-4 accent-green-500 cursor-pointer">
         </div>
 
         <div class="mb-4 bg-black/30 p-3 rounded border border-zinc-800">
@@ -74,14 +66,12 @@
                     <span class="text-orange-500 text-[11px] font-bold">{{ Math.round(val) }}/h</span>
                 </div>
             </div>
-            <div v-if="Object.keys(sortedResources.negatives).length === 0" class="text-[10px] text-zinc-700 italic">Aucun déficit.</div>
 
             <div class="section-title text-blue-500">Excédent Production</div>
             <div v-for="(val, res) in sortedResources.positives" :key="res" class="flex justify-between items-center py-2 border-b border-zinc-900 font-mono">
                 <span class="capitalize text-zinc-500 text-[11px]">{{ res }}</span>
                 <span class="text-blue-400 text-[11px] font-bold">+{{ Math.round(val) }}/h</span>
             </div>
-            <div v-if="Object.keys(sortedResources.positives).length === 0" class="text-[10px] text-zinc-700 italic">Aucun surplus.</div>
         </div>
     </div>
 
@@ -123,7 +113,7 @@
 </div>
 
 <script>
-const { createApp, ref, computed } = Vue;
+const { createApp, ref, computed, onMounted } = Vue;
 
 createApp({
     setup() {
@@ -136,12 +126,18 @@ createApp({
         const activeNode = ref(null);
         const mouseOffset = ref({ x: 0, y: 0 });
 
-        const loadDatabase = (event) => {
-            const file = event.target.files[0];
-            const reader = new FileReader();
-            reader.onload = (e) => { masterData.value = JSON.parse(e.target.result).factories; };
-            reader.readAsText(file);
+        // CHARGEMENT AUTOMATIQUE DU JSON
+        const init = async () => {
+            try {
+                const response = await fetch('data.json');
+                const json = await response.json();
+                masterData.value = json.factories;
+            } catch (err) {
+                console.error("Erreur de chargement data.json :", err);
+            }
         };
+
+        onMounted(init);
 
         const addBuilding = (factory) => {
             buildings.value.push({
@@ -226,34 +222,19 @@ createApp({
             return { resources: res };
         };
 
-        // --- LOGIQUE DE TRI MODIFIÉE POUR MAINTENIR LA VISIBILITÉ ---
         const sortedResources = computed(() => {
-            let realTotals = {}; // Bilan final (avec mode réel)
-            let rawTotals = {};  // Bilan brut (toujours à 100%)
-
+            let realTotals = {}; let rawTotals = {};
             buildings.value.forEach(b => {
                 const realStats = getFinalStats(b).resources;
                 const rawStats = getRawStats(b);
                 for (let [item, val] of Object.entries(realStats)) { realTotals[item] = (realTotals[item] || 0) + val; }
                 for (let [item, val] of Object.entries(rawStats)) { rawTotals[item] = (rawTotals[item] || 0) + val; }
             });
-
-            const negatives = {};
-            const positives = {};
-
-            // On utilise rawTotals pour décider où placer la ressource
-            // pour éviter qu'elle ne disparaisse si elle atteint 0 en mode réel.
+            const negatives = {}; const positives = {};
             Object.keys(rawTotals).forEach(res => {
-                const rawVal = rawTotals[res];
-                const realVal = realTotals[res];
-
-                if (rawVal < -0.01) {
-                    negatives[res] = realVal; // On affiche la valeur réelle, mais on garde la place en "Besoins"
-                } else if (realVal > 0.01) {
-                    positives[res] = realVal;
-                }
+                if (rawTotals[res] < -0.01) negatives[res] = realTotals[res];
+                else if (realTotals[res] > 0.01) positives[res] = realTotals[res];
             });
-
             return { negatives, positives };
         });
 
@@ -284,8 +265,7 @@ createApp({
         const globalPowerBalance = computed(() => totalPowerProduced.value - totalPowerConsumed.value);
 
         const startDrag = (e, b) => {
-            isDragging.value = true;
-            activeNode.value = b;
+            isDragging.value = true; activeNode.value = b;
             mouseOffset.value = { x: e.clientX - b.x, y: e.clientY - b.y };
         };
 
@@ -296,21 +276,17 @@ createApp({
             }
         };
 
-        const onMouseUp = () => {
-            isDragging.value = false;
-            activeNode.value = null;
-        };
-
+        const onMouseUp = () => { isDragging.value = false; activeNode.value = null; };
         const removeBuilding = (id) => buildings.value = buildings.value.filter(b => b.instanceId !== id);
 
         return { 
-            masterData, buildings, loadDatabase, addBuilding, removeBuilding, 
+            masterData, buildings, addBuilding, removeBuilding, 
             getUpgradeRecipes, getFinalStats, getBuildingEfficiency, 
-            globalResourceTotals, globalPowerBalance, totalPowerProduced, totalPowerConsumed, 
-            isSimulationActive, toggleImport, isImported, sortedResources,
+            sortedResources, globalPowerBalance, totalPowerProduced, totalPowerConsumed, 
+            isSimulationActive, toggleImport, isImported, 
             hasActiveSlot: (b) => b.slots.some(s => s !== ""), 
             resetSlots: (b) => b.slots = Array(b.slots.length).fill(""),
-            startDrag, onMouseMove, onMouseUp
+            startDrag, onMouseMove, onMouseUp, globalResourceTotals
         };
     }
 }).mount('#app');
