@@ -1,0 +1,142 @@
+{
+    "factories": [
+        {
+            "name": "Material factory",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "1 x Construction Materials ",
+                    "time": 25,
+                    "input": {
+                        "salvage": 10,
+                        "power": 2
+                    },
+                    "output": {
+                        "cmats": 1
+                    }
+                },
+                {
+                    "name": "20x Msupp",
+                    "time": 40,
+                    "input": {
+                        "salvage": 150,
+                        "power": 3
+                    },
+                    "output": {
+                        "msupp": 20
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Assembly Bay",
+                    "added_recipes": [
+                        {
+                            "name": "5 x Sandbag Sandbag 1 x Construction Materials Construction Materials",
+                            "time": 25,
+                            "input": {
+                                "salvage": 25,
+                                "power": 2
+                            },
+                            "output": {
+                                "sandbag": 5,
+                                "cmats": 1
+                            }
+                        },
+                        {
+                            "name": "1 x Metal Beam Metal Beam 1 x Construction Materials Construction Materials",
+                            "time": 25,
+                            "input": {
+                                "salvage": 25,
+                                "power": 2
+                            },
+                            "output": {
+                                "metalbeam": 1,
+                                "cmats": 1
+                            }
+                        },
+                        {
+                            "name": "5 x Barbed Wire Barbed Wire 1 x Construction Materials Construction Materials",
+                            "time": 25,
+                            "input": {
+                                "salvage": 25,
+                                "power": 2
+                            },
+                            "output": {
+                                "barbedwire": 5,
+                                "cmats": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Diesel Power Plant",
+            "slots": 1,
+            "base_recipes": [
+                {
+                    "name": "5MW by Diesel",
+                    "time": 45,
+                    "input": {
+                        "diesel": 25
+                    },
+                    "output": {
+                        "power": 5
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Petrol Power Plant",
+                    "added_recipes": [
+                        {
+                            "name": "12MW by Petrol",
+                            "time": 90,
+                            "input": {
+                                "petrol": 50
+                            },
+                            "output": {
+                                "power": 12
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Coal Power Plant",
+                    "added_recipes": [
+                        {
+                            "name": "5MW by Coal",
+                            "time": 90,
+                            "input": {
+                                "coal": 60
+                            },
+                            "output": {
+                                "power": 5
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Small Assembly Station",
+            "slots": 1,
+            "base_recipes": [
+                {
+                    "name": "1 x 00MS “Stinger” ",
+                    "time": 180,
+                    "input": {
+                        "03mmcaster": 1,
+                        "cmats": 5,
+                        "power": 2
+                    },
+                    "output": {
+                        "00msstinger": 1
+                    }
+                }
+            ],
+            "upgrades": []
+        }
+    ]
+}
