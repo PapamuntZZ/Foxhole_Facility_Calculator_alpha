@@ -1,70 +1,218 @@
 {
     "factories": [
         {
-            "name": "Material factory",
+            "name": "Ammunition Factory",
             "slots": 5,
             "base_recipes": [
                 {
-                    "name": "1 x Construction Materials ",
+                    "name": "Flame Ammo",
                     "time": 25,
                     "input": {
-                        "salvage": 10,
-                        "power": 2
+                        "Heavy Explosive Materials": 1,
+                        "Construction Materials": 1,
+                        "Power": 4
                     },
                     "output": {
-                        "cmats": 1
+                        "Flame Ammo": 1
                     }
                 },
                 {
-                    "name": "20x Msupp",
-                    "time": 40,
+                    "name": "250mm",
+                    "time": 30,
                     "input": {
-                        "salvage": 150,
-                        "power": 3
+                        "Heavy Explosive Materials": 6,
+                        "Construction Materials": 5,
+                        "Power": 4
                     },
                     "output": {
-                        "msupp": 20
+                        "250mm": 1
                     }
                 }
             ],
             "upgrades": [
                 {
-                    "name": "Assembly Bay",
+                    "name": "Tripod Factory",
                     "added_recipes": [
                         {
-                            "name": "5 x Sandbag Sandbag 1 x Construction Materials Construction Materials",
+                            "name": "Tripod",
                             "time": 25,
                             "input": {
-                                "salvage": 25,
-                                "power": 2
+                                "Construction Materials": 2,
+                                "Power": 4
                             },
                             "output": {
-                                "sandbag": 5,
-                                "cmats": 1
+                                "Tripod": 1
                             }
                         },
                         {
-                            "name": "1 x Metal Beam Metal Beam 1 x Construction Materials Construction Materials",
+                            "name": "Daucus isg.III",
                             "time": 25,
                             "input": {
-                                "salvage": 25,
-                                "power": 2
+                                "Construction Materials": 3,
+                                "Power": 4
                             },
                             "output": {
-                                "metalbeam": 1,
-                                "cmats": 1
+                                "Daucus isg.III": 1
                             }
                         },
                         {
-                            "name": "5 x Barbed Wire Barbed Wire 1 x Construction Materials Construction Materials",
+                            "name": "“Typhon” ra.XII",
                             "time": 25,
                             "input": {
-                                "salvage": 25,
-                                "power": 2
+                                "Construction Materials": 3,
+                                "Power": 4
                             },
                             "output": {
-                                "barbedwire": 5,
-                                "cmats": 1
+                                "“Typhon” ra.XII": 1
+                            }
+                        },
+                        {
+                            "name": "Lamentum mm.IV",
+                            "time": 25,
+                            "input": {
+                                "Construction Materials": 3,
+                                "Power": 4
+                            },
+                            "output": {
+                                "Lamentum mm.IV": 1
+                            }
+                        },
+                        {
+                            "name": "Mounted Fissura gd.I",
+                            "time": 25,
+                            "input": {
+                                "Construction Materials": 3,
+                                "Power": 4
+                            },
+                            "output": {
+                                "Mounted Fissura gd.I": 1
+                            }
+                        },
+                        {
+                            "name": "Cutler Foebreaker",
+                            "time": 25,
+                            "input": {
+                                "Construction Materials": 3,
+                                "Power": 4
+                            },
+                            "output": {
+                                "Cutler Foebreaker": 1
+                            }
+                        },
+                        {
+                            "name": "Mounted Bonesaw MK.3",
+                            "time": 25,
+                            "input": {
+                                "Construction Materials": 3,
+                                "Power": 4
+                            },
+                            "output": {
+                                "Mounted Bonesaw MK.3": 1
+                            }
+                        },
+                        {
+                            "name": "Malone Ratcatcher MK.1",
+                            "time": 25,
+                            "input": {
+                                "Construction Materials": 3,
+                                "Power": 4
+                            },
+                            "output": {
+                                "Malone Ratcatcher MK.1": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Rocket Factory",
+                    "added_recipes": [
+                        {
+                            "name": "3C-High Explosive Rocket",
+                            "time": 25,
+                            "input": {
+                                "Heavy Explosive Materials": 1,
+                                "Construction Materials": 2,
+                                "Power": 4
+                            },
+                            "output": {
+                                "3C-High Explosive Rocket": 1
+                            }
+                        },
+                        {
+                            "name": "4C-Fire Rocket",
+                            "time": 25,
+                            "input": {
+                                "Heavy Explosive Materials": 1,
+                                "Construction Materials": 2,
+                                "Power": 4
+                            },
+                            "output": {
+                                "4C-Fire Rocket": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Large Shell Factory",
+                    "added_recipes": [
+                        {
+                            "name": "75mm",
+                            "time": 60,
+                            "input": {
+                                "Heavy Explosive Materials": 2,
+                                "Construction Materials": 2,
+                                "Power": 4
+                            },
+                            "output": {
+                                "75mm": 1
+                            }
+                        },
+                        {
+                            "name": "94.5mm",
+                            "time": 60,
+                            "input": {
+                                "Heavy Explosive Materials": 2,
+                                "Construction Materials": 2,
+                                "Power": 4
+                            },
+                            "output": {
+                                "94.5mm": 1
+                            }
+                        },
+                        {
+                            "name": "300mm",
+                            "time": 120,
+                            "input": {
+                                "Heavy Explosive Materials": 6,
+                                "Construction Materials": 4,
+                                "Power": 4
+                            },
+                            "output": {
+                                "300mm": 1
+                            }
+                        },
+                        {
+                            "name": "120mm",
+                            "time": 25,
+                            "input": {
+                                "Explosive Materials": 3,
+                                "Construction Materials": 2,
+                                "Power": 4
+                            },
+                            "output": {
+                                "120mm": 1
+                            }
+                        },
+                        {
+                            "name": "150mm",
+                            "time": 40,
+                            "input": {
+                                "Heavy Explosive Materials": 2,
+                                "Construction Materials": 3,
+                                "Power": 4
+                            },
+                            "output": {
+                                "150mm": 1
                             }
                         }
                     ]
@@ -72,60 +220,1657 @@
             ]
         },
         {
-            "name": "Diesel Power Plant",
-            "slots": 1,
+            "name": "Coal Refinery",
+            "slots": 5,
             "base_recipes": [
                 {
-                    "name": "5MW by Diesel",
-                    "time": 45,
+                    "name": "Coke",
+                    "time": 270,
                     "input": {
-                        "diesel": 25
+                        "Coal": 200,
+                        "Power": 3
                     },
                     "output": {
-                        "power": 5
+                        "Coke": 180
                     }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Coke Furnace",
+                    "added_recipes": [
+                        {
+                            "name": "Coke + Sulfur",
+                            "time": 270,
+                            "input": {
+                                "Coal": 200,
+                                "Power": 3
+                            },
+                            "output": {
+                                "Coke": 165,
+                                "Sulfur": 15
+                            }
+                        }
+                    ]
                 },
                 {
-                    "name": "12MW by Petrol",
-                    "time": 90,
-                    "input": {
-                        "petrol": 50
-                    },
-                    "output": {
-                        "power": 12
-                    }
+                    "name": "Coal Liquefier",
+                    "added_recipes": [
+                        {
+                            "name": "Concrete Materials + Oil",
+                            "time": 270,
+                            "input": {
+                                "Coal": 300,
+                                "Water": 50,
+                                "Power": 3
+                            },
+                            "output": {
+                                "Concrete Materials": 1,
+                                "Oil": 50
+                            }
+                        }
+                    ]
                 },
                 {
-                    "name": "Coal Power Plant",
-                    "time": 90,
+                    "name": "Advanced Coal Liquefier",
+                    "added_recipes": [
+                        {
+                            "name": "Coke + Heavy Oil",
+                            "time": 405,
+                            "input": {
+                                "Coal": 300,
+                                "Water": 100,
+                                "Power": 3
+                            },
+                            "output": {
+                                "Coke": 260,
+                                "Heavy Oil": 60
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Concrete Mixer",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "Concrete Materials",
+                    "time": 20,
                     "input": {
-                        "coal": 60
+                        "Components": 20
                     },
                     "output": {
-                        "power": 5
+                        "Concrete Materials": 1
                     }
                 }
             ],
             "upgrades": []
         },
         {
+            "name": "Diesel Power Plant",
+            "slots": 5,
+            "base_recipes": [],
+            "upgrades": [
+                {
+                    "name": "Petrol Power Plant",
+                    "added_recipes": []
+                },
+                {
+                    "name": "Coal Power Plant",
+                    "added_recipes": []
+                }
+            ]
+        },
+        {
+            "name": "Large Assembly Station",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "BMS Black Bolt",
+                    "time": 21600,
+                    "input": {
+                        "Processed Construction Materials": 200,
+                        "Assembly Materials I": 60,
+                        "Assembly Materials IV": 50,
+                        "Power": 8
+                    },
+                    "output": {
+                        "BMS Black Bolt": 1
+                    }
+                },
+                {
+                    "name": "BMS Rockhold",
+                    "time": 1800,
+                    "input": {
+                        "Processed Construction Materials": 20,
+                        "Assembly Materials II": 15,
+                        "Assembly Materials III": 5,
+                        "Power": 8
+                    },
+                    "output": {
+                        "BMS Rockhold": 1
+                    }
+                },
+                {
+                    "name": "BMS Holdout",
+                    "time": 1800,
+                    "input": {
+                        "Processed Construction Materials": 20,
+                        "Assembly Materials II": 15,
+                        "Assembly Materials III": 5,
+                        "Power": 8
+                    },
+                    "output": {
+                        "BMS Holdout": 1
+                    }
+                },
+                {
+                    "name": "BMS Longrider",
+                    "time": 1800,
+                    "input": {
+                        "Processed Construction Materials": 20,
+                        "Assembly Materials II": 15,
+                        "Assembly Materials III": 10,
+                        "Power": 8
+                    },
+                    "output": {
+                        "BMS Longrider": 1
+                    }
+                },
+                {
+                    "name": "BMS Roadhouse",
+                    "time": 1800,
+                    "input": {
+                        "Processed Construction Materials": 20,
+                        "Assembly Materials II": 15,
+                        "Assembly Materials III": 5,
+                        "Power": 8
+                    },
+                    "output": {
+                        "BMS Roadhouse": 1
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Train Assembly",
+                    "added_recipes": [
+                        {
+                            "name": "Aegis Steelbreaker K5a",
+                            "time": 1800,
+                            "input": {
+                                "Steel Construction Materials": 30,
+                                "Assembly Materials I": 30,
+                                "Assembly Materials IV": 30,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Aegis Steelbreaker K5a": 1
+                            }
+                        },
+                        {
+                            "name": "O’Brien Warsmith v.215",
+                            "time": 1800,
+                            "input": {
+                                "Steel Construction Materials": 30,
+                                "Assembly Materials I": 30,
+                                "Assembly Materials IV": 30,
+                                "Power": 8
+                            },
+                            "output": {
+                                "O’Brien Warsmith v.215": 1
+                            }
+                        },
+                        {
+                            "name": "Tempest Cannon RA-2",
+                            "time": 259200,
+                            "input": {
+                                "Steel Construction Materials": 285,
+                                "Assembly Materials III": 95,
+                                "Assembly Materials IV": 105,
+                                "Assembly Materials V": 175,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Tempest Cannon RA-2": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Heavy Tank Assembly",
+                    "added_recipes": [
+                        {
+                            "name": "O-75b \"Ares\"",
+                            "time": 172800,
+                            "input": {
+                                "Steel Construction Materials": 275,
+                                "Assembly Materials V": 175,
+                                "Assembly Materials III": 105,
+                                "Assembly Materials IV": 95,
+                                "Power": 8
+                            },
+                            "output": {
+                                "O-75b \"Ares\"": 1
+                            }
+                        },
+                        {
+                            "name": "Cullen Predator Mk. III",
+                            "time": 172800,
+                            "input": {
+                                "Steel Construction Materials": 275,
+                                "Assembly Materials V": 175,
+                                "Assembly Materials III": 105,
+                                "Assembly Materials IV": 95,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Cullen Predator Mk. III": 1
+                            }
+                        },
+                        {
+                            "name": "Lance-36",
+                            "time": 64800,
+                            "input": {
+                                "Steel Construction Materials": 50,
+                                "Assembly Materials III": 30,
+                                "Assembly Materials IV": 60,
+                                "Assembly Materials V": 35,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Lance-36": 1
+                            }
+                        },
+                        {
+                            "name": "Flood Mk. I",
+                            "time": 64800,
+                            "input": {
+                                "Steel Construction Materials": 50,
+                                "Assembly Materials III": 30,
+                                "Assembly Materials IV": 60,
+                                "Assembly Materials V": 35,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Flood Mk. I": 1
+                            }
+                        },
+                        {
+                            "name": "Lance-25 “Hasta”",
+                            "time": 86400,
+                            "input": {
+                                "Steel Construction Materials": 60,
+                                "Assembly Materials III": 65,
+                                "Assembly Materials IV": 45,
+                                "Assembly Materials V": 65,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Lance-25 “Hasta”": 1
+                            }
+                        },
+                        {
+                            "name": "Flood Juggernaut Mk. VII",
+                            "time": 79200,
+                            "input": {
+                                "Steel Construction Materials": 55,
+                                "Assembly Materials III": 65,
+                                "Assembly Materials IV": 30,
+                                "Assembly Materials V": 45,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Flood Juggernaut Mk. VII": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Small Assembly Station",
             "slots": 5,
             "base_recipes": [
                 {
-                    "name": "1 x 00MS “Stinger” ",
-                    "time": 180,
+                    "name": "Material Pallet",
+                    "time": 5,
                     "input": {
-                        "03mmcaster": 1,
-                        "cmats": 5,
-                        "power": 2
+                        "Basic Materials": 25,
+                        "Power": 2
                     },
                     "output": {
-                        "00msstinger": 1
+                        "Material Pallet": 1
+                    }
+                },
+                {
+                    "name": "00MS “Stinger”",
+                    "time": 180,
+                    "input": {
+                        "03MM “Caster”": 1,
+                        "Construction Materials": 5,
+                        "Power": 2
+                    },
+                    "output": {
+                        "00MS “Stinger”": 1
+                    }
+                },
+                {
+                    "name": "R-5b “Sisyphus” Hauler",
+                    "time": 300,
+                    "input": {
+                        "R-1 Hauler": 1,
+                        "Construction Materials": 10,
+                        "Power": 2
+                    },
+                    "output": {
+                        "R-5b “Sisyphus” Hauler": 1
+                    }
+                },
+                {
+                    "name": "R-9 “Speartip” Escort",
+                    "time": 300,
+                    "input": {
+                        "R-1 Hauler": 1,
+                        "Construction Materials": 10,
+                        "Power": 2
+                    },
+                    "output": {
+                        "R-9 “Speartip” Escort": 1
+                    }
+                },
+                {
+                    "name": "Dunne Leatherback 2a",
+                    "time": 300,
+                    "input": {
+                        "Dunne Transport": 1,
+                        "Construction Materials": 10,
+                        "Power": 2
+                    },
+                    "output": {
+                        "Dunne Leatherback 2a": 1
+                    }
+                },
+                {
+                    "name": "Dunne Landrunner 12c",
+                    "time": 300,
+                    "input": {
+                        "Dunne Transport": 1,
+                        "Construction Materials": 10,
+                        "Power": 2
+                    },
+                    "output": {
+                        "Dunne Landrunner 12c": 1
+                    }
+                },
+                {
+                    "name": "BMS Mineseeker",
+                    "time": 900,
+                    "input": {
+                        "Construction Materials": 125,
+                        "Assembly Materials I": 10,
+                        "Assembly Materials II": 20,
+                        "Power": 2
+                    },
+                    "output": {
+                        "BMS Mineseeker": 1
+                    }
+                },
+                {
+                    "name": "BMS Railtruck",
+                    "time": 300,
+                    "input": {
+                        "Construction Materials": 35,
+                        "Assembly Materials I": 15,
+                        "Assembly Materials II": 5,
+                        "Power": 2
+                    },
+                    "output": {
+                        "BMS Railtruck": 1
+                    }
+                },
+                {
+                    "name": "BMS Linerunner",
+                    "time": 300,
+                    "input": {
+                        "Construction Materials": 35,
+                        "Assembly Materials I": 15,
+                        "Assembly Materials II": 5,
+                        "Power": 2
+                    },
+                    "output": {
+                        "BMS Linerunner": 1
+                    }
+                },
+                {
+                    "name": "R-12b - “Salva” Flame Truck",
+                    "time": 300,
+                    "input": {
+                        "R-12 - “Salus” Ambulance": 1,
+                        "Construction Materials": 15,
+                        "Assembly Materials II": 5,
+                        "Power": 2
+                    },
+                    "output": {
+                        "R-12b - “Salva” Flame Truck": 1
+                    }
+                },
+                {
+                    "name": "Dunne Dousing Engine 3r",
+                    "time": 300,
+                    "input": {
+                        "Dunne Responder 3e": 1,
+                        "Construction Materials": 15,
+                        "Assembly Materials II": 5,
+                        "Power": 2
+                    },
+                    "output": {
+                        "Dunne Dousing Engine 3r": 1
+                    }
+                },
+                {
+                    "name": "BMS Tinderbox",
+                    "time": 300,
+                    "input": {
+                        "Construction Materials": 35,
+                        "Assembly Materials I": 5,
+                        "Assembly Materials II": 15,
+                        "Power": 2
+                    },
+                    "output": {
+                        "BMS Tinderbox": 1
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Motor Pool",
+                    "added_recipes": [
+                        {
+                            "name": "T5 “Percutio”",
+                            "time": 300,
+                            "input": {
+                                "T3 “Xiphos”": 1,
+                                "Processed Construction Materials": 5,
+                                "Assembly Materials I": 10,
+                                "Power": 2
+                            },
+                            "output": {
+                                "T5 “Percutio”": 1
+                            }
+                        },
+                        {
+                            "name": "T8 “Gemini”",
+                            "time": 300,
+                            "input": {
+                                "T3 “Xiphos”": 1,
+                                "Construction Materials": 10,
+                                "Assembly Materials I": 10,
+                                "Power": 2
+                            },
+                            "output": {
+                                "T8 “Gemini”": 1
+                            }
+                        },
+                        {
+                            "name": "T20 “Ixion” Tankette",
+                            "time": 300,
+                            "input": {
+                                "T12 “Actaeon” Tankette": 1,
+                                "Construction Materials": 10,
+                                "Assembly Materials I": 15,
+                                "Power": 2
+                            },
+                            "output": {
+                                "T20 “Ixion” Tankette": 1
+                            }
+                        },
+                        {
+                            "name": "T14 “Vesta” Tankette",
+                            "time": 600,
+                            "input": {
+                                "T12 “Actaeon” Tankette": 1,
+                                "Processed Construction Materials": 10,
+                                "Assembly Materials I": 15,
+                                "Power": 2
+                            },
+                            "output": {
+                                "T14 “Vesta” Tankette": 1
+                            }
+                        },
+                        {
+                            "name": "UV-5c “Odyssey”",
+                            "time": 180,
+                            "input": {
+                                "UV-05a “Argonaut”": 1,
+                                "Construction Materials": 3,
+                                "Power": 2
+                            },
+                            "output": {
+                                "UV-5c “Odyssey”": 1
+                            }
+                        },
+                        {
+                            "name": "UV-24 “Icarus”",
+                            "time": 180,
+                            "input": {
+                                "UV-05a “Argonaut”": 1,
+                                "Construction Materials": 3,
+                                "Assembly Materials II": 10,
+                                "Power": 2
+                            },
+                            "output": {
+                                "UV-24 “Icarus”": 1
+                            }
+                        },
+                        {
+                            "name": "O’Brien V.113 Gravekeeper",
+                            "time": 300,
+                            "input": {
+                                "O’Brien V.110": 1,
+                                "Processed Construction Materials": 10,
+                                "Assembly Materials I": 10,
+                                "Power": 2
+                            },
+                            "output": {
+                                "O’Brien V.113 Gravekeeper": 1
+                            }
+                        },
+                        {
+                            "name": "O’Brien V.121 Highlander",
+                            "time": 300,
+                            "input": {
+                                "O’Brien V.110": 1,
+                                "Construction Materials": 5,
+                                "Assembly Materials I": 5,
+                                "Power": 2
+                            },
+                            "output": {
+                                "O’Brien V.121 Highlander": 1
+                            }
+                        },
+                        {
+                            "name": "O’Brien V.130 Wild Jack",
+                            "time": 300,
+                            "input": {
+                                "O’Brien V.110": 1,
+                                "Processed Construction Materials": 10,
+                                "Assembly Materials I": 10,
+                                "Power": 2
+                            },
+                            "output": {
+                                "O’Brien V.130 Wild Jack": 1
+                            }
+                        },
+                        {
+                            "name": "O’Brien V.101 Freeman",
+                            "time": 300,
+                            "input": {
+                                "O’Brien v.190 Knave": 1,
+                                "Construction Materials": 15,
+                                "Assembly Materials I": 15,
+                                "Power": 2
+                            },
+                            "output": {
+                                "O’Brien V.101 Freeman": 1
+                            }
+                        },
+                        {
+                            "name": "Drummond Spitfire 100d",
+                            "time": 180,
+                            "input": {
+                                "Drummond 100a": 1,
+                                "Construction Materials": 3,
+                                "Assembly Materials II": 10,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Drummond Spitfire 100d": 1
+                            }
+                        },
+                        {
+                            "name": "Drummond Loscann 55c",
+                            "time": 180,
+                            "input": {
+                                "Drummond 100a": 1,
+                                "Construction Materials": 3,
+                                "Assembly Materials II": 5,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Drummond Loscann 55c": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Rocket Factory",
+                    "added_recipes": [
+                        {
+                            "name": "R-17 “Retiarius” Skirmisher",
+                            "time": 300,
+                            "input": {
+                                "R-1 Hauler": 1,
+                                "Processed Construction Materials": 70,
+                                "Assembly Materials I": 10,
+                                "Assembly Materials III": 8,
+                                "Power": 2
+                            },
+                            "output": {
+                                "R-17 “Retiarius” Skirmisher": 1
+                            }
+                        },
+                        {
+                            "name": "DAE 3b-2 “Hades’ Net”",
+                            "time": 600,
+                            "input": {
+                                "Processed Construction Materials": 20,
+                                "Assembly Materials II": 15,
+                                "Assembly Materials IV": 3,
+                                "Power": 2
+                            },
+                            "output": {
+                                "DAE 3b-2 “Hades’ Net”": 1
+                            }
+                        },
+                        {
+                            "name": "Niska-Rycker Mk. IX Skycaller",
+                            "time": 300,
+                            "input": {
+                                "Niska Mk. I Gun Motor Carriage": 1,
+                                "Processed Construction Materials": 10,
+                                "Assembly Materials I": 10,
+                                "Assembly Materials III": 8,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Niska-Rycker Mk. IX Skycaller": 1
+                            }
+                        },
+                        {
+                            "name": "Rycker 4/3-F Wasp Nest",
+                            "time": 600,
+                            "input": {
+                                "Processed Construction Materials": 20,
+                                "Assembly Materials II": 15,
+                                "Assembly Materials IV": 3,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Rycker 4/3-F Wasp Nest": 1
+                            }
+                        },
+                        {
+                            "name": "HH-b “Hoplite”",
+                            "time": 300,
+                            "input": {
+                                "HH-a “Javelin”": 1,
+                                "Processed Construction Materials": 3,
+                                "Assembly Materials IV": 3,
+                                "Power": 2
+                            },
+                            "output": {
+                                "HH-b “Hoplite”": 1
+                            }
+                        },
+                        {
+                            "name": "HH-d “Peltast”",
+                            "time": 300,
+                            "input": {
+                                "HH-a “Javelin”": 1,
+                                "Processed Construction Materials": 5,
+                                "Assembly Materials II": 5,
+                                "Assembly Materials IV": 3,
+                                "Power": 2
+                            },
+                            "output": {
+                                "HH-d “Peltast”": 1
+                            }
+                        },
+                        {
+                            "name": "Niska Mk. II Blinder",
+                            "time": 300,
+                            "input": {
+                                "Niska Mk. I Gun Motor Carriage": 1,
+                                "Processed Construction Materials": 5,
+                                "Assembly Materials II": 10,
+                                "Assembly Materials IV": 3,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Niska Mk. II Blinder": 1
+                            }
+                        },
+                        {
+                            "name": "King Jester Mk. I-1",
+                            "time": 600,
+                            "input": {
+                                "King Spire Mk. I": 1,
+                                "Processed Construction Materials": 20,
+                                "Assembly Materials I": 15,
+                                "Assembly Materials III": 3,
+                                "Power": 2
+                            },
+                            "output": {
+                                "King Jester Mk. I-1": 1
+                            }
+                        },
+                        {
+                            "name": "T13 “Deioneus” Rocket Battery",
+                            "time": 600,
+                            "input": {
+                                "T12 “Actaeon” Tankette": 1,
+                                "Processed Construction Materials": 20,
+                                "Assembly Materials I": 15,
+                                "Assembly Materials III": 3,
+                                "Power": 2
+                            },
+                            "output": {
+                                "T13 “Deioneus” Rocket Battery": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Field Station",
+                    "added_recipes": [
+                        {
+                            "name": "BMS - Scrap Hauler",
+                            "time": 900,
+                            "input": {
+                                "Processed Construction Materials": 90,
+                                "Assembly Materials IV": 25,
+                                "Power": 2
+                            },
+                            "output": {
+                                "BMS - Scrap Hauler": 1
+                            }
+                        },
+                        {
+                            "name": "BMS - Fabricator",
+                            "time": 900,
+                            "input": {
+                                "BMS - Universal Assembly Rig": 1,
+                                "Processed Construction Materials": 10,
+                                "Power": 2
+                            },
+                            "output": {
+                                "BMS - Fabricator": 1
+                            }
+                        },
+                        {
+                            "name": "HC-2 “Scorpion”",
+                            "time": 180,
+                            "input": {
+                                "HC-7 \"Ballista\"": 1,
+                                "Construction Materials": 5,
+                                "Power": 2
+                            },
+                            "output": {
+                                "HC-2 “Scorpion”": 1
+                            }
+                        },
+                        {
+                            "name": "AB-11 “Doru”",
+                            "time": 300,
+                            "input": {
+                                "AB-8 “Acheron”": 1,
+                                "Processed Construction Materials": 5,
+                                "Assembly Materials III": 3,
+                                "Power": 2
+                            },
+                            "output": {
+                                "AB-11 “Doru”": 1
+                            }
+                        },
+                        {
+                            "name": "40-45 “Smelter”",
+                            "time": 300,
+                            "input": {
+                                "AA-2 \"Battering Ram\"": 1,
+                                "Processed Construction Materials": 5,
+                                "Assembly Materials IV": 5,
+                                "Power": 2
+                            },
+                            "output": {
+                                "40-45 “Smelter”": 1
+                            }
+                        },
+                        {
+                            "name": "King Gallant Mk. II",
+                            "time": 300,
+                            "input": {
+                                "King Spire Mk. I": 1,
+                                "Processed Construction Materials": 5,
+                                "Assembly Materials III": 5,
+                                "Power": 2
+                            },
+                            "output": {
+                                "King Gallant Mk. II": 1
+                            }
+                        },
+                        {
+                            "name": "Balfour Rampart 68mm",
+                            "time": 300,
+                            "input": {
+                                "Collins Cannon 68mm": 1,
+                                "Processed Construction Materials": 5,
+                                "Assembly Materials IV": 5,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Balfour Rampart 68mm": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Tank Factory",
+                    "added_recipes": [
+                        {
+                            "name": "Noble Firebrand Mk. XVII",
+                            "time": 420,
+                            "input": {
+                                "Noble Widow MK. XIV": 1,
+                                "Processed Construction Materials": 10,
+                                "Assembly Materials II": 10,
+                                "Assembly Materials III": 15,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Noble Firebrand Mk. XVII": 1
+                            }
+                        },
+                        {
+                            "name": "H-19 “Vulcan”",
+                            "time": 300,
+                            "input": {
+                                "H-5 \"Hatchet\"": 1,
+                                "Processed Construction Materials": 35,
+                                "Assembly Materials II": 20,
+                                "Assembly Materials III": 5,
+                                "Power": 2
+                            },
+                            "output": {
+                                "H-19 “Vulcan”": 1
+                            }
+                        },
+                        {
+                            "name": "H-10 “Pelekys”",
+                            "time": 300,
+                            "input": {
+                                "H-5 \"Hatchet\"": 1,
+                                "Processed Construction Materials": 8,
+                                "Assembly Materials II": 20,
+                                "Assembly Materials III": 5,
+                                "Power": 2
+                            },
+                            "output": {
+                                "H-10 “Pelekys”": 1
+                            }
+                        },
+                        {
+                            "name": "H-8 “Kranesca”",
+                            "time": 300,
+                            "input": {
+                                "H-5 \"Hatchet\"": 1,
+                                "Processed Construction Materials": 5,
+                                "Assembly Materials I": 20,
+                                "Assembly Materials IV": 5,
+                                "Power": 2
+                            },
+                            "output": {
+                                "H-8 “Kranesca”": 1
+                            }
+                        },
+                        {
+                            "name": "85K-a “Spatha”",
+                            "time": 420,
+                            "input": {
+                                "85K-b “Falchion”": 1,
+                                "Processed Construction Materials": 8,
+                                "Assembly Materials I": 10,
+                                "Assembly Materials IV": 8,
+                                "Power": 2
+                            },
+                            "output": {
+                                "85K-a “Spatha”": 1
+                            }
+                        },
+                        {
+                            "name": "86K-c “Ranseur”",
+                            "time": 420,
+                            "input": {
+                                "86K-a “Bardiche”": 1,
+                                "Processed Construction Materials": 10,
+                                "Assembly Materials II": 10,
+                                "Assembly Materials III": 10,
+                                "Power": 2
+                            },
+                            "output": {
+                                "86K-c “Ranseur”": 1
+                            }
+                        },
+                        {
+                            "name": "DAE 2a-1 “Ruptura”",
+                            "time": 600,
+                            "input": {
+                                "Processed Construction Materials": 135,
+                                "Assembly Materials I": 10,
+                                "Assembly Materials IV": 15,
+                                "Power": 2
+                            },
+                            "output": {
+                                "DAE 2a-1 “Ruptura”": 1
+                            }
+                        },
+                        {
+                            "name": "Devitt Ironhide Mk. IV",
+                            "time": 300,
+                            "input": {
+                                "Devitt Mk. III": 1,
+                                "Processed Construction Materials": 8,
+                                "Assembly Materials II": 20,
+                                "Assembly Materials III": 5,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Devitt Ironhide Mk. IV": 1
+                            }
+                        },
+                        {
+                            "name": "Devitt-Caine Mk. IV MMR",
+                            "time": 300,
+                            "input": {
+                                "Devitt Mk. III": 1,
+                                "Processed Construction Materials": 3,
+                                "Assembly Materials I": 20,
+                                "Assembly Materials IV": 3,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Devitt-Caine Mk. IV MMR": 1
+                            }
+                        },
+                        {
+                            "name": "Silverhand Chieftain - Mk. VI",
+                            "time": 420,
+                            "input": {
+                                "Silverhand - Mk. IV": 1,
+                                "Processed Construction Materials": 5,
+                                "Assembly Materials I": 10,
+                                "Assembly Materials IV": 8,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Silverhand Chieftain - Mk. VI": 1
+                            }
+                        },
+                        {
+                            "name": "Gallagher Highwayman Mk. III",
+                            "time": 420,
+                            "input": {
+                                "Gallagher Outlaw Mk. II": 1,
+                                "Processed Construction Materials": 5,
+                                "Assembly Materials II": 10,
+                                "Assembly Materials III": 5,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Gallagher Highwayman Mk. III": 1
+                            }
+                        },
+                        {
+                            "name": "Huber Starbreaker 94.5mm",
+                            "time": 600,
+                            "input": {
+                                "Processed Construction Materials": 135,
+                                "Assembly Materials I": 10,
+                                "Assembly Materials IV": 15,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Huber Starbreaker 94.5mm": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Weapons Platform",
+                    "added_recipes": [
+                        {
+                            "name": "945g “Stygian Bolt”",
+                            "time": 420,
+                            "input": {
+                                "AA-2 \"Battering Ram\"": 1,
+                                "Steel Construction Materials": 15,
+                                "Assembly Materials II": 20,
+                                "Assembly Materials III": 15,
+                                "Power": 2
+                            },
+                            "output": {
+                                "945g “Stygian Bolt”": 1
+                            }
+                        },
+                        {
+                            "name": "Balfour Stockade 75mm",
+                            "time": 420,
+                            "input": {
+                                "Balfour Wolfhound 40mm": 1,
+                                "Steel Construction Materials": 15,
+                                "Assembly Materials II": 20,
+                                "Assembly Materials III": 15,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Balfour Stockade 75mm": 1
+                            }
+                        },
+                        {
+                            "name": "85V-g \"Talos\"",
+                            "time": 600,
+                            "input": {
+                                "85K-b “Falchion”": 1,
+                                "Steel Construction Materials": 5,
+                                "Assembly Materials I": 10,
+                                "Assembly Materials IV": 15,
+                                "Power": 2
+                            },
+                            "output": {
+                                "85V-g \"Talos\"": 1
+                            }
+                        },
+                        {
+                            "name": "Gallagher Thornfall Mk. VI",
+                            "time": 600,
+                            "input": {
+                                "Gallagher Outlaw Mk. II": 1,
+                                "Steel Construction Materials": 10,
+                                "Assembly Materials I": 10,
+                                "Assembly Materials IV": 15,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Gallagher Thornfall Mk. VI": 1
+                            }
+                        },
+                        {
+                            "name": "Silverhand Lordscar - Mk. X",
+                            "time": 600,
+                            "input": {
+                                "Silverhand - Mk. IV": 1,
+                                "Steel Construction Materials": 40,
+                                "Assembly Materials II": 25,
+                                "Assembly Materials III": 25,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Silverhand Lordscar - Mk. X": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Materials Factory",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "Construction Materials",
+                    "time": 25,
+                    "input": {
+                        "Salvage": 10,
+                        "Power": 2
+                    },
+                    "output": {
+                        "Construction Materials": 1
+                    }
+                },
+                {
+                    "name": "Maintenance Supplies",
+                    "time": 25,
+                    "input": {
+                        "Salvage": 100,
+                        "Power": 2
+                    },
+                    "output": {
+                        "Maintenance Supplies": 20
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Forge",
+                    "added_recipes": [
+                        {
+                            "name": "Assembly Materials I",
+                            "time": 60,
+                            "input": {
+                                "Salvage": 15,
+                                "Coke": 75,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Assembly Materials I": 1
+                            }
+                        },
+                        {
+                            "name": "Assembly Materials II",
+                            "time": 60,
+                            "input": {
+                                "Salvage": 15,
+                                "Petrol": 50,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Assembly Materials II": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Metal Press",
+                    "added_recipes": [
+                        {
+                            "name": "Construction Materials",
+                            "time": 25,
+                            "input": {
+                                "Salvage": 15,
+                                "Petrol": 25,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Construction Materials": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Assembly Bay",
+                    "added_recipes": [
+                        {
+                            "name": "Construction Materials + Sandbag",
+                            "time": 25,
+                            "input": {
+                                "Salvage": 25,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Construction Materials": 1,
+                                "Sandbag": 5
+                            }
+                        },
+                        {
+                            "name": "Construction Materials + Barbed Wire",
+                            "time": 25,
+                            "input": {
+                                "Salvage": 25,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Construction Materials": 1,
+                                "Barbed Wire": 5
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Smelter",
+                    "added_recipes": [
+                        {
+                            "name": "Construction Materials",
+                            "time": 25,
+                            "input": {
+                                "Salvage": 15,
+                                "Coke": 25,
+                                "Power": 2
+                            },
+                            "output": {
+                                "Construction Materials": 3
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Metalworks Factory",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "Processed Construction Materials",
+                    "time": 60,
+                    "input": {
+                        "Construction Materials": 3,
+                        "Components": 20,
+                        "Power": 5
+                    },
+                    "output": {
+                        "Processed Construction Materials": 1
+                    }
+                },
+                {
+                    "name": "Pipe",
+                    "time": 120,
+                    "input": {
+                        "Processed Construction Materials": 3,
+                        "Power": 5
+                    },
+                    "output": {
+                        "Pipe": 1
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Recycler",
+                    "added_recipes": [
+                        {
+                            "name": "Processed Construction Materials + Metal Beam",
+                            "time": 60,
+                            "input": {
+                                "Construction Materials": 3,
+                                "Components": 20,
+                                "Power": 5
+                            },
+                            "output": {
+                                "Processed Construction Materials": 1,
+                                "Metal Beam": 1
+                            }
+                        },
+                        {
+                            "name": "Components",
+                            "time": 90,
+                            "input": {
+                                "Damaged Components": 30,
+                                "Power": 5
+                            },
+                            "output": {
+                                "Components": 20
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Blast Furnace",
+                    "added_recipes": [
+                        {
+                            "name": "Assembly Materials IV",
+                            "time": 120,
+                            "input": {
+                                "Processed Construction Materials": 1,
+                                "Heavy Oil": 66,
+                                "Power": 5
+                            },
+                            "output": {
+                                "Assembly Materials IV": 1
+                            }
+                        },
+                        {
+                            "name": "Assembly Materials III",
+                            "time": 120,
+                            "input": {
+                                "Construction Materials": 3,
+                                "Sulfur": 20,
+                                "Power": 5
+                            },
+                            "output": {
+                                "Assembly Materials III": 1
+                            }
+                        },
+                        {
+                            "name": "Processed Construction Materials",
+                            "time": 60,
+                            "input": {
+                                "Construction Materials": 3,
+                                "Components": 55,
+                                "Heavy Oil": 6,
+                                "Power": 5
+                            },
+                            "output": {
+                                "Processed Construction Materials": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Engineering Station",
+                    "added_recipes": [
+                        {
+                            "name": "Steel Construction Materials",
+                            "time": 90,
+                            "input": {
+                                "Processed Construction Materials": 3,
+                                "Coke": 200,
+                                "Sulfur": 65,
+                                "Heavy Oil": 35,
+                                "Power": 5
+                            },
+                            "output": {
+                                "Steel Construction Materials": 1
+                            }
+                        },
+                        {
+                            "name": "Steel Construction Materials",
+                            "time": 90,
+                            "input": {
+                                "Processed Construction Materials": 9,
+                                "Coke": 375,
+                                "Enriched Oil": 90,
+                                "Water": 100,
+                                "Power": 5
+                            },
+                            "output": {
+                                "Steel Construction Materials": 3
+                            }
+                        },
+                        {
+                            "name": "Assembly Materials V",
+                            "time": 120,
+                            "input": {
+                                "Steel Construction Materials": 3,
+                                "Coke": 245,
+                                "Assembly Materials I": 10,
+                                "Assembly Materials II": 10,
+                                "Power": 5
+                            },
+                            "output": {
+                                "Assembly Materials V": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Oil Refinery",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "Petrol",
+                    "time": 150,
+                    "input": {
+                        "Oil": 150,
+                        "Power": 1
+                    },
+                    "output": {
+                        "Petrol": 150
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Reformer",
+                    "added_recipes": [
+                        {
+                            "name": "Petrol",
+                            "time": 150,
+                            "input": {
+                                "Oil": 120,
+                                "Water": 30,
+                                "Power": 1
+                            },
+                            "output": {
+                                "Petrol": 150
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Cracking Unit",
+                    "added_recipes": [
+                        {
+                            "name": "Heavy Oil",
+                            "time": 160,
+                            "input": {
+                                "Oil": 150,
+                                "Power": 1
+                            },
+                            "output": {
+                                "Heavy Oil": 90
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Petrochemical Plant",
+                    "added_recipes": [
+                        {
+                            "name": "Enriched Oil",
+                            "time": 200,
+                            "input": {
+                                "Sulfur": 60,
+                                "Heavy Oil": 30,
+                                "Power": 1
+                            },
+                            "output": {
+                                "Enriched Oil": 30
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Oil Well",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "Oil (Canned)",
+                    "time": 50,
+                    "input": {},
+                    "output": {
+                        "Oil (Canned)": 1
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Electric Oil Well",
+                    "added_recipes": [
+                        {
+                            "name": "Oil (Canned)",
+                            "time": 26,
+                            "input": {},
+                            "output": {
+                                "Oil (Canned)": 1
+                            }
+                        },
+                        {
+                            "name": "Oil",
+                            "time": 40,
+                            "input": {},
+                            "output": {
+                                "Oil": 75
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Fracker",
+                    "added_recipes": [
+                        {
+                            "name": "Oil (Canned)",
+                            "time": 40,
+                            "input": {
+                                "Water": 25
+                            },
+                            "output": {
+                                "Oil (Canned)": 2
+                            }
+                        },
+                        {
+                            "name": "Oil",
+                            "time": 30,
+                            "input": {
+                                "Water": 25
+                            },
+                            "output": {
+                                "Oil": 75
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Power Station",
+            "slots": 5,
+            "base_recipes": [],
+            "upgrades": [
+                {
+                    "name": "Sulfuric Reactor",
+                    "added_recipes": [
+                        {
+                            "name": "Sulfur",
+                            "time": 120,
+                            "input": {
+                                "Heavy Oil": 50,
+                                "Power": 15
+                            },
+                            "output": {
+                                "Sulfur": 5
+                            }
+                        },
+                        {
+                            "name": "Sulfur",
+                            "time": 120,
+                            "input": {
+                                "Coke": 30,
+                                "Water": 1,
+                                "Power": 15
+                            },
+                            "output": {
+                                "Sulfur": 5
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Stationary Harvester (Coal)",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "Coal",
+                    "time": 12,
+                    "input": {
+                        "Petrol": 1
+                    },
+                    "output": {
+                        "Coal": 50
                     }
                 }
             ],
             "upgrades": []
+        },
+        {
+            "name": "Stationary Harvester (Components)",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "Components",
+                    "time": 12,
+                    "input": {
+                        "Petrol": 4
+                    },
+                    "output": {
+                        "Components": 6
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Excavator",
+                    "added_recipes": [
+                        {
+                            "name": "Damaged Components",
+                            "time": 12,
+                            "input": {
+                                "Petrol": 6
+                            },
+                            "output": {
+                                "Damaged Components": 9
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Stationary Harvester (Scrap)",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "Salvage",
+                    "time": 12,
+                    "input": {
+                        "Petrol": 4
+                    },
+                    "output": {
+                        "Salvage": 50
+                    }
+                }
+            ],
+            "upgrades": []
+        },
+        {
+            "name": "Stationary Harvester (Sulfur)",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "Sulfur",
+                    "time": 12,
+                    "input": {
+                        "Heavy Oil": 4
+                    },
+                    "output": {
+                        "Sulfur": 6
+                    }
+                }
+            ],
+            "upgrades": []
+        },
+        {
+            "name": "Water Pump",
+            "slots": 5,
+            "base_recipes": [
+                {
+                    "name": "Water (Canned)",
+                    "time": 50,
+                    "input": {},
+                    "output": {
+                        "Water (Canned)": 1
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Electric Water Pump",
+                    "added_recipes": [
+                        {
+                            "name": "Water",
+                            "time": 50,
+                            "input": {},
+                            "output": {
+                                "Water": 60
+                            }
+                        },
+                        {
+                            "name": "Water (Canned)",
+                            "time": 40,
+                            "input": {},
+                            "output": {
+                                "Water (Canned)": 1
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
