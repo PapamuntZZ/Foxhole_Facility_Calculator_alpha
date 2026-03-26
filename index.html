@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Foxhole Facility Architect - v2.6</title>
+    <title>Foxhole Facility Architect - v2.6.1</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -142,7 +142,6 @@ createApp({
         const isSimulationActive = ref(false);
         const importedResources = ref(['salvage', 'coal', 'sulfur', 'oil', 'water', 'coke']); 
 
-        // NAVIGATION CANVAS
         const scale = ref(1);
         const panX = ref(0);
         const panY = ref(0);
@@ -180,16 +179,14 @@ createApp({
             });
         };
 
-        // ZOOM MOLETTE
         const onWheel = (e) => {
             const delta = e.deltaY > 0 ? 0.9 : 1.1;
             const newScale = scale.value * delta;
             if (newScale > 0.1 && newScale < 3) scale.value = newScale;
         };
 
-        // PAN CLIC MOLETTE
         const onCanvasMouseDown = (e) => {
-            if (e.button === 1) { // Bouton molette
+            if (e.button === 1) { 
                 isPanning.value = true;
                 mouseOffset.value = { x: e.clientX - panX.value, y: e.clientY - panY.value };
             }
@@ -302,11 +299,26 @@ createApp({
                 for (let [item, val] of Object.entries(rawStats)) { rawTotals[item] = (rawTotals[item] || 0) + val; }
             });
             const negatives = {}; const positives = {};
+            
+            // Correction demandée : On trie par rapport aux besoins théoriques (rawTotals)
+            // mais on affiche la valeur théorique dans la section négative pour voir le manque réel à combler.
             Object.keys(rawTotals).forEach(res => {
-                if (rawTotals[res] < -0.01) negatives[res] = realTotals[res];
-                else if (realTotals[res] > 0.01) positives[res] = realTotals[res];
+                if (rawTotals[res] < -0.01) {
+                    negatives[res] = rawTotals[res]; // Affiche le déficit à 100% de débit
+                } else if (realTotals[res] > 0.01) {
+                    positives[res] = realTotals[res]; // Affiche le surplus réel effectif
+                }
             });
             return { negatives, positives };
+        });
+
+        const globalResourceTotals = computed(() => {
+            let totals = {};
+            buildings.value.forEach(b => {
+                const stats = getFinalStats(b).resources;
+                for (let [item, val] of Object.entries(stats)) { totals[item] = (totals[item] || 0) + val; }
+            });
+            return totals;
         });
 
         const getLocalPower = (b) => {
@@ -335,7 +347,8 @@ createApp({
             isSimulationActive, toggleImport, isImported, 
             hasActiveSlot: (b) => b.slots.some(s => s !== ""), 
             resetSlots: (b) => b.slots = Array(b.slots.length).fill(""),
-            startDrag, onMouseMove, onMouseUp, onWheel, onCanvasMouseDown, canvasStyle, scale
+            startDrag, onMouseMove, onMouseUp, onWheel, onCanvasMouseDown, canvasStyle, scale,
+            globalResourceTotals
         };
     }
 }).mount('#app');
