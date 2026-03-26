@@ -84,44 +84,33 @@
                     "output": {
                         "power": 5
                     }
-                }
-            ],
-            "upgrades": [
+                },
                 {
-                    "name": "Petrol Power Plant",
-                    "added_recipes": [
-                        {
-                            "name": "12MW by Petrol",
-                            "time": 90,
-                            "input": {
-                                "petrol": 50
-                            },
-                            "output": {
-                                "power": 12
-                            }
-                        }
-                    ]
+                    "name": "12MW by Petrol",
+                    "time": 90,
+                    "input": {
+                        "petrol": 50
+                    },
+                    "output": {
+                        "power": 12
+                    }
                 },
                 {
                     "name": "Coal Power Plant",
-                    "added_recipes": [
-                        {
-                            "name": "5MW by Coal",
-                            "time": 90,
-                            "input": {
-                                "coal": 60
-                            },
-                            "output": {
-                                "power": 5
-                            }
-                        }
-                    ]
+                    "time": 90,
+                    "input": {
+                        "coal": 60
+                    },
+                    "output": {
+                        "power": 5
+                    }
                 }
-            ]
+            ],
+            "upgrades": []
         },
         {
             "name": "Small Assembly Station",
-            "slots": 1,
+            "slots": 5,
             "base_recipes": [
                 {
                     "name": "1 x 00MS “Stinger” ",
