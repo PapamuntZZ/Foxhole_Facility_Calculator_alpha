@@ -1,6 +1,100 @@
 {
     "factories": [
         {
+            "name": "Diesel Power Plant",
+            "slots": 1,
+            "base_recipes": [
+                {
+                    "name": "5MW by Diesel",
+                    "time": 45,
+                    "input": {
+                        "diesel": 25
+                    },
+                    "output": {
+                        "power": 5
+                    }
+                },
+                {
+                    "name": "12MW by Petrol",
+                    "time": 90,
+                    "input": {
+                        "petrol": 50
+                    },
+                    "output": {
+                        "power": 12
+                    }
+                },
+                {
+                    "name": "5MW by Coal",
+                    "time": 90,
+                    "input": {
+                        "coal": 60
+                    },
+                    "output": {
+                        "power": 5
+                    }
+                }
+            ],
+            "upgrades": []
+        },
+        {
+            "name": "Power Station",
+            "slots": 1,
+            "base_recipes": [
+                {
+                    "name": "10MW by Coal and Water",
+                    "time": 90,
+                    "input": {
+                        "coal": 30,
+                        "water": 1
+                    },
+                    "output": {
+                        "power": 10
+                    }
+                },
+                {
+                    "name": "10MW by Oil",
+                    "time": 60,
+                    "input": {
+                        "oil": 50
+                    },
+                    "output": {
+                        "power": 10
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Sulfuric Reactor",
+                    "added_recipes": [
+                        {
+                            "name": "Sulfur",
+                            "time": 120,
+                            "input": {
+                                "Heavy Oil": 50,
+                                "Power": 15
+                            },
+                            "output": {
+                                "Sulfur": 5
+                            }
+                        },
+                        {
+                            "name": "Sulfur",
+                            "time": 120,
+                            "input": {
+                                "Coke": 30,
+                                "Water": 1,
+                                "Power": 15
+                            },
+                            "output": {
+                                "Sulfur": 5
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Ammunition Factory",
             "slots": 5,
             "base_recipes": [
@@ -309,230 +403,8 @@
             "upgrades": []
         },
         {
-            "name": "Diesel Power Plant",
-            "slots": 5,
-            "base_recipes": [],
-            "upgrades": [
-                {
-                    "name": "Petrol Power Plant",
-                    "added_recipes": []
-                },
-                {
-                    "name": "Coal Power Plant",
-                    "added_recipes": []
-                }
-            ]
-        },
-        {
-            "name": "Large Assembly Station",
-            "slots": 5,
-            "base_recipes": [
-                {
-                    "name": "BMS Black Bolt",
-                    "time": 21600,
-                    "input": {
-                        "Processed Construction Materials": 200,
-                        "Assembly Materials I": 60,
-                        "Assembly Materials IV": 50,
-                        "Power": 8
-                    },
-                    "output": {
-                        "BMS Black Bolt": 1
-                    }
-                },
-                {
-                    "name": "BMS Rockhold",
-                    "time": 1800,
-                    "input": {
-                        "Processed Construction Materials": 20,
-                        "Assembly Materials II": 15,
-                        "Assembly Materials III": 5,
-                        "Power": 8
-                    },
-                    "output": {
-                        "BMS Rockhold": 1
-                    }
-                },
-                {
-                    "name": "BMS Holdout",
-                    "time": 1800,
-                    "input": {
-                        "Processed Construction Materials": 20,
-                        "Assembly Materials II": 15,
-                        "Assembly Materials III": 5,
-                        "Power": 8
-                    },
-                    "output": {
-                        "BMS Holdout": 1
-                    }
-                },
-                {
-                    "name": "BMS Longrider",
-                    "time": 1800,
-                    "input": {
-                        "Processed Construction Materials": 20,
-                        "Assembly Materials II": 15,
-                        "Assembly Materials III": 10,
-                        "Power": 8
-                    },
-                    "output": {
-                        "BMS Longrider": 1
-                    }
-                },
-                {
-                    "name": "BMS Roadhouse",
-                    "time": 1800,
-                    "input": {
-                        "Processed Construction Materials": 20,
-                        "Assembly Materials II": 15,
-                        "Assembly Materials III": 5,
-                        "Power": 8
-                    },
-                    "output": {
-                        "BMS Roadhouse": 1
-                    }
-                }
-            ],
-            "upgrades": [
-                {
-                    "name": "Train Assembly",
-                    "added_recipes": [
-                        {
-                            "name": "Aegis Steelbreaker K5a",
-                            "time": 1800,
-                            "input": {
-                                "Steel Construction Materials": 30,
-                                "Assembly Materials I": 30,
-                                "Assembly Materials IV": 30,
-                                "Power": 8
-                            },
-                            "output": {
-                                "Aegis Steelbreaker K5a": 1
-                            }
-                        },
-                        {
-                            "name": "O’Brien Warsmith v.215",
-                            "time": 1800,
-                            "input": {
-                                "Steel Construction Materials": 30,
-                                "Assembly Materials I": 30,
-                                "Assembly Materials IV": 30,
-                                "Power": 8
-                            },
-                            "output": {
-                                "O’Brien Warsmith v.215": 1
-                            }
-                        },
-                        {
-                            "name": "Tempest Cannon RA-2",
-                            "time": 259200,
-                            "input": {
-                                "Steel Construction Materials": 285,
-                                "Assembly Materials III": 95,
-                                "Assembly Materials IV": 105,
-                                "Assembly Materials V": 175,
-                                "Power": 8
-                            },
-                            "output": {
-                                "Tempest Cannon RA-2": 1
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "Heavy Tank Assembly",
-                    "added_recipes": [
-                        {
-                            "name": "O-75b \"Ares\"",
-                            "time": 172800,
-                            "input": {
-                                "Steel Construction Materials": 275,
-                                "Assembly Materials V": 175,
-                                "Assembly Materials III": 105,
-                                "Assembly Materials IV": 95,
-                                "Power": 8
-                            },
-                            "output": {
-                                "O-75b \"Ares\"": 1
-                            }
-                        },
-                        {
-                            "name": "Cullen Predator Mk. III",
-                            "time": 172800,
-                            "input": {
-                                "Steel Construction Materials": 275,
-                                "Assembly Materials V": 175,
-                                "Assembly Materials III": 105,
-                                "Assembly Materials IV": 95,
-                                "Power": 8
-                            },
-                            "output": {
-                                "Cullen Predator Mk. III": 1
-                            }
-                        },
-                        {
-                            "name": "Lance-36",
-                            "time": 64800,
-                            "input": {
-                                "Steel Construction Materials": 50,
-                                "Assembly Materials III": 30,
-                                "Assembly Materials IV": 60,
-                                "Assembly Materials V": 35,
-                                "Power": 8
-                            },
-                            "output": {
-                                "Lance-36": 1
-                            }
-                        },
-                        {
-                            "name": "Flood Mk. I",
-                            "time": 64800,
-                            "input": {
-                                "Steel Construction Materials": 50,
-                                "Assembly Materials III": 30,
-                                "Assembly Materials IV": 60,
-                                "Assembly Materials V": 35,
-                                "Power": 8
-                            },
-                            "output": {
-                                "Flood Mk. I": 1
-                            }
-                        },
-                        {
-                            "name": "Lance-25 “Hasta”",
-                            "time": 86400,
-                            "input": {
-                                "Steel Construction Materials": 60,
-                                "Assembly Materials III": 65,
-                                "Assembly Materials IV": 45,
-                                "Assembly Materials V": 65,
-                                "Power": 8
-                            },
-                            "output": {
-                                "Lance-25 “Hasta”": 1
-                            }
-                        },
-                        {
-                            "name": "Flood Juggernaut Mk. VII",
-                            "time": 79200,
-                            "input": {
-                                "Steel Construction Materials": 55,
-                                "Assembly Materials III": 65,
-                                "Assembly Materials IV": 30,
-                                "Assembly Materials V": 45,
-                                "Power": 8
-                            },
-                            "output": {
-                                "Flood Juggernaut Mk. VII": 1
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "name": "Small Assembly Station",
-            "slots": 5,
+            "slots": 1,
             "base_recipes": [
                 {
                     "name": "Material Pallet",
@@ -1315,6 +1187,213 @@
             ]
         },
         {
+            "name": "Large Assembly Station",
+            "slots": 1,
+            "base_recipes": [
+                {
+                    "name": "BMS Black Bolt",
+                    "time": 21600,
+                    "input": {
+                        "Processed Construction Materials": 200,
+                        "Assembly Materials I": 60,
+                        "Assembly Materials IV": 50,
+                        "Power": 8
+                    },
+                    "output": {
+                        "BMS Black Bolt": 1
+                    }
+                },
+                {
+                    "name": "BMS Rockhold",
+                    "time": 1800,
+                    "input": {
+                        "Processed Construction Materials": 20,
+                        "Assembly Materials II": 15,
+                        "Assembly Materials III": 5,
+                        "Power": 8
+                    },
+                    "output": {
+                        "BMS Rockhold": 1
+                    }
+                },
+                {
+                    "name": "BMS Holdout",
+                    "time": 1800,
+                    "input": {
+                        "Processed Construction Materials": 20,
+                        "Assembly Materials II": 15,
+                        "Assembly Materials III": 5,
+                        "Power": 8
+                    },
+                    "output": {
+                        "BMS Holdout": 1
+                    }
+                },
+                {
+                    "name": "BMS Longrider",
+                    "time": 1800,
+                    "input": {
+                        "Processed Construction Materials": 20,
+                        "Assembly Materials II": 15,
+                        "Assembly Materials III": 10,
+                        "Power": 8
+                    },
+                    "output": {
+                        "BMS Longrider": 1
+                    }
+                },
+                {
+                    "name": "BMS Roadhouse",
+                    "time": 1800,
+                    "input": {
+                        "Processed Construction Materials": 20,
+                        "Assembly Materials II": 15,
+                        "Assembly Materials III": 5,
+                        "Power": 8
+                    },
+                    "output": {
+                        "BMS Roadhouse": 1
+                    }
+                }
+            ],
+            "upgrades": [
+                {
+                    "name": "Train Assembly",
+                    "added_recipes": [
+                        {
+                            "name": "Aegis Steelbreaker K5a",
+                            "time": 1800,
+                            "input": {
+                                "Steel Construction Materials": 30,
+                                "Assembly Materials I": 30,
+                                "Assembly Materials IV": 30,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Aegis Steelbreaker K5a": 1
+                            }
+                        },
+                        {
+                            "name": "O’Brien Warsmith v.215",
+                            "time": 1800,
+                            "input": {
+                                "Steel Construction Materials": 30,
+                                "Assembly Materials I": 30,
+                                "Assembly Materials IV": 30,
+                                "Power": 8
+                            },
+                            "output": {
+                                "O’Brien Warsmith v.215": 1
+                            }
+                        },
+                        {
+                            "name": "Tempest Cannon RA-2",
+                            "time": 259200,
+                            "input": {
+                                "Steel Construction Materials": 285,
+                                "Assembly Materials III": 95,
+                                "Assembly Materials IV": 105,
+                                "Assembly Materials V": 175,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Tempest Cannon RA-2": 1
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "Heavy Tank Assembly",
+                    "added_recipes": [
+                        {
+                            "name": "O-75b \"Ares\"",
+                            "time": 172800,
+                            "input": {
+                                "Steel Construction Materials": 275,
+                                "Assembly Materials V": 175,
+                                "Assembly Materials III": 105,
+                                "Assembly Materials IV": 95,
+                                "Power": 8
+                            },
+                            "output": {
+                                "O-75b \"Ares\"": 1
+                            }
+                        },
+                        {
+                            "name": "Cullen Predator Mk. III",
+                            "time": 172800,
+                            "input": {
+                                "Steel Construction Materials": 275,
+                                "Assembly Materials V": 175,
+                                "Assembly Materials III": 105,
+                                "Assembly Materials IV": 95,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Cullen Predator Mk. III": 1
+                            }
+                        },
+                        {
+                            "name": "Lance-36",
+                            "time": 64800,
+                            "input": {
+                                "Steel Construction Materials": 50,
+                                "Assembly Materials III": 30,
+                                "Assembly Materials IV": 60,
+                                "Assembly Materials V": 35,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Lance-36": 1
+                            }
+                        },
+                        {
+                            "name": "Flood Mk. I",
+                            "time": 64800,
+                            "input": {
+                                "Steel Construction Materials": 50,
+                                "Assembly Materials III": 30,
+                                "Assembly Materials IV": 60,
+                                "Assembly Materials V": 35,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Flood Mk. I": 1
+                            }
+                        },
+                        {
+                            "name": "Lance-25 “Hasta”",
+                            "time": 86400,
+                            "input": {
+                                "Steel Construction Materials": 60,
+                                "Assembly Materials III": 65,
+                                "Assembly Materials IV": 45,
+                                "Assembly Materials V": 65,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Lance-25 “Hasta”": 1
+                            }
+                        },
+                        {
+                            "name": "Flood Juggernaut Mk. VII",
+                            "time": 79200,
+                            "input": {
+                                "Steel Construction Materials": 55,
+                                "Assembly Materials III": 65,
+                                "Assembly Materials IV": 30,
+                                "Assembly Materials V": 45,
+                                "Power": 8
+                            },
+                            "output": {
+                                "Flood Juggernaut Mk. VII": 1
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "Materials Factory",
             "slots": 5,
             "base_recipes": [
@@ -1710,41 +1789,6 @@
                             },
                             "output": {
                                 "Oil": 75
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Power Station",
-            "slots": 5,
-            "base_recipes": [],
-            "upgrades": [
-                {
-                    "name": "Sulfuric Reactor",
-                    "added_recipes": [
-                        {
-                            "name": "Sulfur",
-                            "time": 120,
-                            "input": {
-                                "Heavy Oil": 50,
-                                "Power": 15
-                            },
-                            "output": {
-                                "Sulfur": 5
-                            }
-                        },
-                        {
-                            "name": "Sulfur",
-                            "time": 120,
-                            "input": {
-                                "Coke": 30,
-                                "Water": 1,
-                                "Power": 15
-                            },
-                            "output": {
-                                "Sulfur": 5
                             }
                         }
                     ]
