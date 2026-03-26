@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Foxhole Facility Architect - v2.6.1</title>
+    <title>Foxhole Facility Architect - v2.7</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -34,6 +34,10 @@
         .import-active { background: #1e40af; color: white; border-color: #3b82f6; }
         .import-inactive { background: #27272a; color: #71717a; }
         .section-title { font-size: 10px; font-weight: bold; color: #555; text-transform: uppercase; border-bottom: 1px solid #222; padding-bottom: 4px; margin: 15px 0 8px 0; letter-spacing: 1px; }
+        
+        /* Style de la barre de rendement */
+        .efficiency-container { background: #000; height: 6px; border-radius: 3px; overflow: hidden; margin-top: 4px; border: 1px solid #222; }
+        .efficiency-fill { height: 100%; transition: width 0.5s ease-out, background-color 0.3s; }
     </style>
 </head>
 <body>
@@ -111,8 +115,17 @@
                         <option v-for="up in b.upgrades" :key="up.name" :value="up.name">{{ up.name }}</option>
                     </select>
 
-                    <div v-if="isSimulationActive && hasActiveSlot(b)" class="text-[9px] font-bold text-center py-1 rounded bg-zinc-800" :class="getBuildingEfficiency(b) < 1 ? 'text-orange-400' : 'text-green-500'">
-                        RENDEMENT : {{ Math.round(getBuildingEfficiency(b) * 100) }}%
+                    <div v-if="isSimulationActive && hasActiveSlot(b)" class="space-y-1">
+                        <div class="flex justify-between text-[9px] font-black uppercase tracking-wider">
+                            <span :class="getBuildingEfficiency(b) < 1 ? 'text-orange-400' : 'text-green-500'">Rendement Réel</span>
+                            <span>{{ Math.round(getBuildingEfficiency(b) * 100) }}%</span>
+                        </div>
+                        <div class="efficiency-container">
+                            <div class="efficiency-fill" 
+                                 :class="getBuildingEfficiency(b) < 1 ? 'bg-orange-500' : 'bg-green-500'"
+                                 :style="{ width: (getBuildingEfficiency(b) * 100) + '%' }">
+                            </div>
+                        </div>
                     </div>
 
                     <div v-for="(slotValue, index) in b.slots" :key="index" class="slot-row">
@@ -299,14 +312,11 @@ createApp({
                 for (let [item, val] of Object.entries(rawStats)) { rawTotals[item] = (rawTotals[item] || 0) + val; }
             });
             const negatives = {}; const positives = {};
-            
-            // Correction demandée : On trie par rapport aux besoins théoriques (rawTotals)
-            // mais on affiche la valeur théorique dans la section négative pour voir le manque réel à combler.
             Object.keys(rawTotals).forEach(res => {
                 if (rawTotals[res] < -0.01) {
-                    negatives[res] = rawTotals[res]; // Affiche le déficit à 100% de débit
+                    negatives[res] = rawTotals[res];
                 } else if (realTotals[res] > 0.01) {
-                    positives[res] = realTotals[res]; // Affiche le surplus réel effectif
+                    positives[res] = realTotals[res];
                 }
             });
             return { negatives, positives };
@@ -340,13 +350,15 @@ createApp({
 
         const removeBuilding = (id) => buildings.value = buildings.value.filter(b => b.instanceId !== id);
 
+        const resetSlots = (b) => { b.slots = Array(b.slots.length).fill(""); };
+
         return { 
             masterData, buildings, addBuilding, removeBuilding, 
             getUpgradeRecipes, getFinalStats, getBuildingEfficiency, 
             sortedResources, globalPowerBalance, totalPowerProduced, totalPowerConsumed, 
             isSimulationActive, toggleImport, isImported, 
             hasActiveSlot: (b) => b.slots.some(s => s !== ""), 
-            resetSlots: (b) => b.slots = Array(b.slots.length).fill(""),
+            resetSlots,
             startDrag, onMouseMove, onMouseUp, onWheel, onCanvasMouseDown, canvasStyle, scale,
             globalResourceTotals
         };
